@@ -17,7 +17,31 @@ You will be using two new response codes:
 - **404**: Not found — we cannot find the requested data.
 
 ---
+## Completed Functionality
 
+The Flask application now includes two API routes for handling contract and customer requests.
+
+## Contract Route
+
+GET /contract/<id>
+
+Returns the matching contract information with a 200 status code when the contract ID exists.
+
+Returns a 404 status code when the contract ID does not exist.
+
+## Customer Route
+
+GET /customer/<customer_name>
+
+Returns a 204 status code with an empty response body when the customer exists.
+
+Returns a 404 status code when the customer does not exist.
+
+Customer information is not returned because it is sensitive.
+
+## Route Testing
+
+The completed routes were tested locally using the Flask development server.
 ## Tasks
 
 ### Task 1: Define the Problem
@@ -147,3 +171,9 @@ Build the following routes:
 - Delete stale branches on GitHub.
 - Remove unnecessary or commented-out code.
 - Update `.gitignore` if needed to exclude sensitive data
+
+## Completed Route Testing
+
+The routes were tested locally using the Flask development server.
+
+![Completed route testing](screenshots/routes-complete.png)
